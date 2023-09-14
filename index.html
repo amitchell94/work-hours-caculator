@@ -13,7 +13,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet"/>
 </head>
-<body>
+<body onload="calculateHours()">
 <!-- Header-->
 <header style="margin-top: 5rem">
     <div class="container px-lg-5">
@@ -26,29 +26,38 @@
                     <br>
                     Enter the start and end times below to calculate
                 </p>
-
             </div>
             <div style="margin: 1rem" class="fs-4 row col-12 text-center">
                 <div class="col-sm-6 row mx-1">
                     <label for="startTime" class="col-sm-12 my-1">Start Time</label>
-                    <input type="time"  id="startTime" class="col-sm-4 my-1 mx-auto" value="12">
+                    <input type="time"  id="startTime" class="col-sm-4 my-1 mx-auto form-control-lg" value="09:00">
                 </div>
                 <div class="col-sm-6 row ">
                     <label for="endTime" class="col-sm-12 my-1">End Time</label>
-                    <input type="time"  id="endTime" class="col-sm-4 my-1 mx-auto" value="50">
+                    <input type="time"  id="endTime" class="col-sm-4 my-1 mx-auto form-control-lg" value="17:00">
                 </div>
             </div>
         </div>
     </div>
-
     </div>
 </header>
 <!-- Page Content-->
 <section class="pt-4">
     <div class="container px-lg-5">
         <!-- Page Features-->
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center input-group input-group-lg">
         <div class="row gx-lg-5">
-            
+            <p class="fs-4">You spent a total of <span class="h2" id="totalHours">8.00</span> hours at work</p>
+            <br>
+            <br>
+            <br>
+            <p class="fs-4">Based on a working day of </p>
+            <div class="col-sm-6 row mx-auto my-2">
+                <input type="number"  id="standardHours" class="col-sm-4 my-1 mx-auto form-control-lg" value="7.5">
+            </div>
+            <br>
+            <p class="fs-4">You would have worked <span class="h2" id="overtimeHours">0.50</span> hours of overtime</p>
+        </div>
         </div>
     </div>
 </section>
