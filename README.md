@@ -1,4 +1,4 @@
-# 4-20ma-converter
+# Work hours calculator
 A simple tool to calculate hours works and overtime.
 
 ## Getting Started
