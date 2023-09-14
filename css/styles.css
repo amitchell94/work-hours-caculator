@@ -50,6 +50,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: var(--bs-font-sans-serif);
   font-size: 1rem;
@@ -11757,4 +11760,8 @@ textarea.form-control-lg {
   height: 4rem;
   width: 4rem;
   font-size: 2rem;
+}
+
+.content-wrapper {
+  flex: 1;
 }
